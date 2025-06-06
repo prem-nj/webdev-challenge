@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+      margin: 0;
+    box-sizing: border-box;
+}
+
+.linkbox ,.emailAddress{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.3rem;
+     border: 2px solid black;
+     padding: 23px;
+     text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+   
+    display: flex;
+    gap: 1.2rem;
+}
+
+
+
+.mainbox{
+display: flex;
+flex-direction: column;
+justify-content:center ;
+align-items: center;
+gap: 8.3rem;
+margin-top: 150px;
+}
