@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+
+}
+
+
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(p3nl_q99j_180212.webp);
+}
+
+h2{text-align: center;
+background-color: brown;
+width: 70%;
+border-radius: 2.3rem;
+margin: auto;
+    
+}
+.box{
+    padding: 2.3rem;
+    margin: 2.3rem;
+    border: 3px solid black;
+    color: rgb(20, 20, 20);
+}
+
+#box2{
+    background-color: yellow;
+    border-style: dashed;
+    border-radius: 1.3rem;
+    color: red;
+    font-weight: 900;
+}
+#box1{
+    background-color: rgb(236, 152, 18);
+    border-style: dashed;
+    border-radius: 1.3rem;
+    color: rgb(255, 255, 255);
+      font-weight: 900;
+}
+#box3{
+    background-color: rgb(161, 243, 117);
+    border-style: dashed;
+    border-botton-lefradius: 1.3rem;
+    color: purple;
+      font-weight: 900;
+
+}
