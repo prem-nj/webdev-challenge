@@ -1,0 +1,86 @@
+<!-- design english alphabet chart such on clicking the alphabet the appropriate
+example must be display using htmlnclient - side image mapping -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Alphabet Chart</title>
+    <style>
+        #alphabetChart{
+            width: 800px;
+            height: 600px;
+        }
+        .tabel{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p,h1{
+            text-align: center;
+        }
+
+       body{
+        background-color: aquamarine;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive English Alphabet Chart</h1>
+    <p>Click on any letter to see examples of words starting with that letter!</p>
+    <p><small>(Each letter is clickable on the image above)</small></p>
+    <div class="tabel">
+
+
+        <img src="alphabetimage.jpg" alt="English Alphabet Chart" usemap="#alphabetmap" id="alphabetChart">
+        
+        <map name="alphabetmap">
+            <!-- Row 1: A-E -->
+            <area shape="rect" coords="0,0,150,119" alt="A" href="https://en.wikipedia.org/wiki/A">
+            <area shape="rect" coords="151,0,300,119" alt="B" href="https://en.wikipedia.org/wiki/B">
+            <area shape="rect" coords="301,0,450,119" alt="C" href="https://en.wikipedia.org/wiki/C">
+            <area shape="rect" coords="451,0,600,119" alt="D" href="https://en.wikipedia.org/wiki/D">
+            <area shape="rect" coords="601,0,799,119" alt="E" href="https://en.wikipedia.org/wiki/E">
+            
+            <!-- Row 2: F-J -->
+            <area shape="rect" coords="0,120,150,239" alt="F" href="https://en.wikipedia.org/wiki/F">
+            <area shape="rect" coords="151,120,300,239" alt="G" href="https://en.wikipedia.org/wiki/G">
+            <area shape="rect" coords="301,120,450,239" alt="H" href="https://en.wikipedia.org/wiki/H">
+            <area shape="rect" coords="451,120,600,239" alt="I" href="https://en.wikipedia.org/wiki/I">
+            <area shape="rect" coords="601,120,799,239" alt="J" href="https://en.wikipedia.org/wiki/J">
+            
+            <!-- Row 3: K-O -->
+            <area shape="rect" coords="0,240,150,359" alt="K" href="https://en.wikipedia.org/wiki/K">
+            <area shape="rect" coords="151,240,300,359" alt="L" href="https://en.wikipedia.org/wiki/L">
+            <area shape="rect" coords="301,240,450,359" alt="M" href="https://en.wikipedia.org/wiki/M">
+            <area shape="rect" coords="451,240,600,359" alt="N" href="https://en.wikipedia.org/wiki/N">
+            <area shape="rect" coords="601,240,799,359" alt="O" href="https://en.wikipedia.org/wiki/O">
+            
+            <!-- Row 4: P-T -->
+            <area shape="rect" coords="0,360,150,479" alt="P" href="https://en.wikipedia.org/wiki/P">
+            <area shape="rect" coords="151,360,300,479" alt="Q" href="https://en.wikipedia.org/wiki/Q">
+            <area shape="rect" coords="301,360,450,479" alt="R" href="https://en.wikipedia.org/wiki/R">
+            <area shape="rect" coords="451,360,600,479" alt="S" href="https://en.wikipedia.org/wiki/S">
+            <area shape="rect" coords="601,360,799,479" alt="T" href="https://en.wikipedia.org/wiki/T">
+            
+            <!-- Row 5: U-Y -->
+            <area shape="rect" coords="0,480,150,599" alt="U" href="https://en.wikipedia.org/wiki/U">
+            <area shape="rect" coords="151,480,300,599" alt="V" href="https://en.wikipedia.org/wiki/V">
+            <area shape="rect" coords="301,480,450,599" alt="W" href="https://en.wikipedia.org/wiki/W">
+            <area shape="rect" coords="451,480,600,599" alt="X" href="https://en.wikipedia.org/wiki/X">
+            <area shape="rect" coords="601,480,799,599" alt="Y" href="https://en.wikipedia.org/wiki/Y">
+            <!-- Row 6: Z -->
+            <area shape="rect" coords="0,600,150,719" alt="Z" href="https://en.wikipedia.org/wiki/Z">
+        </map>
+    </div>
+
+
+    <div style="margin: 50px 0; text-align: center; border-top: 1px dashed #ccc; padding-top: 20px;">
+        <p style="color: #7f8c8d;">Interactive English Alphabet Chart with Client-side Image Mapping</p>
+        <p style="color: #95a5a6; font-size: 14px;">Created on July 16, 2025</p>
+    </div>
+
+</body>
+</html>
