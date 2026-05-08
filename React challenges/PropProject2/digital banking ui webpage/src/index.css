@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.hero_scrollbar::-webkit-scrollbar{
+display:none;
+}
