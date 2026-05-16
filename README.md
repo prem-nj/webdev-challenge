@@ -1,5 +1,4 @@
-# 💼 Projects | Pranita Navnath Jadhav
-
+# 💼 Projects | INCLUDED
 A curated collection of my live web projects.
 
 ---
