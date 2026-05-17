@@ -1,8 +1,35 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState({color:"Traffic",val:0})
+
+// useEffect(() => {
+//   alert("this will render all time")
+
+// })
+
+
+// useEffect(() => {
+//   alert("this render one time")
+
+// }, [])
+
+// useEffect(() => {
+//   alert("counter is upadated")
+
+// }, [count])
+
+useEffect(() => {
+alert(`${count.color} is pressed the signal ${count.val}`)
+
+if(count.val>3){
+  alert("clicked more than 3")
+  setCount({color:"Traffic",val:0});
+}
+ 
+}, [count.val,count.color])
+
 
 
   
