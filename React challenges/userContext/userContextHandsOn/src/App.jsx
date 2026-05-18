@@ -1,16 +1,17 @@
 import { createContext, useContext, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+
+import ChildA from './components/ChildA'
 import './App.css'
 
+const usercontext=createContext();
 function App() {
-const usecontext=createContext();
+const [user, setuser] = useState({username:"prem",age:34})
   return (
-   <usecontext.Provider>
-     <childA/>
-   </usecontext.Provider>
+   <usercontext.Provider value={user}>
+     <ChildA/>
+   </usercontext.Provider>
   )
 }
 
 export default App
+export {usercontext}
