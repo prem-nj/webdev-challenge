@@ -1,5 +1,5 @@
 import React from 'react'
-import ChildB from '../../../userContextHandsOn/src/components/ChildB'
+import ChildB from './ChildB'
 
 const ChildA = () => {
   return (
