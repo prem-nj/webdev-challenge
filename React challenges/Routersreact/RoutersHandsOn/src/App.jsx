@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard'
 import Navbar from './components/Navbar'
 import About from './components/About'
 import UserId from './components/UserId'
+import NotFound from './components/NotFound'
 
 function App() {
 
@@ -61,6 +62,9 @@ function App() {
           <Navbar />
           <UserId />
         </div>
+    },{
+      path:'*',
+      element:<NotFound/>
     }
   ])
 
