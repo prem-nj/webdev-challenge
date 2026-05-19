@@ -1,10 +1,12 @@
 import { useState } from 'react'
 
 import './App.css'
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Home from './components/Home'
 import ContactsUs from './components/ContactsUs'
 import Dashboard from './components/Dashboard'
+import Navbarbar from './components/Navbarbar'
+import About from './components/About'
 
 
 function App() {
@@ -23,18 +25,19 @@ function App() {
     }, {
       path: "/Dashboard",
       element: <Dashboard />
+    },{
+      path:"/about",
+      element:<About/>
     }
-
-
   ]
-
-
-
-
   )
-
   return (
-    <RouterProvider router={router} />
+<div>
+  <Navbarbar/>
+
+  <RouterProvider router={router} />
+</div>
+
   )
 }
 
