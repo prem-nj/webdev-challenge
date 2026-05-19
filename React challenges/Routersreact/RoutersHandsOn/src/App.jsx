@@ -1,43 +1,74 @@
-import { useState } from 'react'
-
 import './App.css'
-import { createBrowserRouter,RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 import Home from './components/Home'
 import ContactsUs from './components/ContactsUs'
 import Dashboard from './components/Dashboard'
-import Navbarbar from './components/Navbarbar'
+import Navbar from './components/Navbar'
 import About from './components/About'
-
+import UserId from './components/UserId'
 
 function App() {
-  const router = createBrowserRouter([
 
+  const router = createBrowserRouter([
     {
       path: '/home',
-      element: <Home />
-    }
-    , {
-      path: "/",
-      element: <home />
+      element:
+        <div>
+          <Navbar />
+          <Home />
+        </div>
+    },
+    {
+      path: '/',
+      element:
+        <div>
+
+          <Navbar />
+          <Home />
+        </div>
+    },
+    {
+      path: '/Contacts',
+      element:
+        <div>
+          <Navbar />
+          <ContactsUs />
+        </div>
+
+
+    },
+    {
+      path: '/Dashboard',
+      element:
+        <div>
+          <Navbar />
+          <Dashboard />
+        </div>
+    },
+    {
+      path: '/about',
+      element:
+        <div>
+          <Navbar />
+          <About />
+        </div>
+
     }, {
-      path: "/Contacts",
-      element: <ContactsUs />
-    }, {
-      path: "/Dashboard",
-      element: <Dashboard />
-    },{
-      path:"/about",
-      element:<About/>
+      path: '/home/:id',
+      element:
+        <div>
+          <Navbar />
+          <UserId />
+        </div>
     }
-  ]
-  )
+  ])
+
   return (
-<div>
-  <Navbarbar/>
+    <div>
 
-  <RouterProvider router={router} />
-</div>
-
+      <RouterProvider router={router} />
+    </div>
   )
 }
 
