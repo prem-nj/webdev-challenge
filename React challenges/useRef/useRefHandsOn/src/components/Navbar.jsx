@@ -1,17 +1,36 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const Navbar = () => {
+function Navbar() {
   return (
- <div className='w-full bg-black h-1/13 relative py-4 '>
-       <ul className='flex text-white uppercase gap-15 absolute bottom-0.5  ml-10'>
-<li > <a href="/home">Home</a></li>
-<li><a href="/contact">contact</a></li>
-<li><a href="/about">about</a></li>
-<li><a href="/info">INFO</a></li>
+    <nav className='w-full h-20 bg-gray-900 text-white flex items-center justify-between px-10 shadow-lg'>
 
-       </ul>
-
+      {/* Logo */}
+      <div className='text-3xl font-bold tracking-wide cursor-pointer'>
+        TimerApp
       </div>
+
+      {/* Links */}
+      <ul className='flex gap-10 text-lg font-medium'>
+
+        <li className='hover:text-amber-400 cursor-pointer transition duration-300'>
+          <NavLink to="/">Home</NavLink>
+        </li>
+
+        <li className='hover:text-amber-400 cursor-pointer transition duration-300'>
+          <NavLink to="/about">About</NavLink>
+        </li>
+
+        <li className='hover:text-amber-400 cursor-pointer transition duration-300'>
+          <NavLink to="/info">Info</NavLink>
+        </li>
+
+      </ul>
+
+      {/* Button */}
+     
+
+    </nav>
   )
 }
 
