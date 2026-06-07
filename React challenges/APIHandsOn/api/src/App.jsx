@@ -23,9 +23,9 @@ function App() {
         <button onClick={getData}>Get Data</button>
       </div>
       
-     { datainfo.map(function(indx,elem){
+     { datainfo.map(function(elem,indx){
 
-      return   <div>hello {indx} </div>
+      return   <div key={indx}>hello {indx}--  {elem.title} </div>
       })
     }
       
