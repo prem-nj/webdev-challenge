@@ -1,14 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [datainfo, setdata] = useState([]);
+
+  const getData = async () => {
+    try {
+      const response = await axios.get("https://jsonplaceholder.typicode.com/todos")
+      console.log(response.data)
+      setdata(response.data)
+    } catch (error) {
+      // console.error(error)
+    }
+  }
+
 
   return (
+    <div>
 
+      <div className="btn">
+        <button onClick={getData}>Get Data</button>
+      </div>
+      
+     { datainfo.map(function(indx,elem){
+
+      return   <div>hello {indx} </div>
+      })
+    }
+      
+      </div>
   )
 }
 
