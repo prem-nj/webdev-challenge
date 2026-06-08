@@ -14,7 +14,7 @@ const getData= async()=>{
 
   return (
  <div className='bg-black h-screen'>
-     response.map(function (elem,indx) {
+     getData.map(function (elem,indx) {
       <div className='bg-amber-50'>hello</div>
      })
     
