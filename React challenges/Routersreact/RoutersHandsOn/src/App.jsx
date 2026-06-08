@@ -30,7 +30,7 @@ function App() {
         </div>
     },
     {
-      path: '/Contacts',
+      path: '/contacts',
       element:
         <div>
           <Navbar />
@@ -40,7 +40,7 @@ function App() {
 
     },
     {
-      path: '/Dashboard',
+      path: '/dashboard',
       element:
         <div>
           <Navbar />
@@ -62,9 +62,9 @@ function App() {
           <Navbar />
           <UserId />
         </div>
-    },{
-      path:'*',
-      element:<NotFound/>
+    }, {
+      path: '*',
+      element: <NotFound />
     }
   ])
 
