@@ -14,6 +14,7 @@ var usersRouter = require('./routes/users');
 var Postmodel=require('./model/Postmodel')
 var app = express();
 const connectDB = require("./connection");
+const e = require("express");
 // Connect Database
 connectDB();
 // view engine setup
@@ -53,6 +54,18 @@ res.status(201).json({
   posts
 })
 
+})
+
+
+
+
+
+app.delete('/postdelete/:id',async(req,res)=>{
+  const delpost=await Postmodel.findByIdAndDelete(req.params.id);
+  res.status(201).json({
+    message:"deleted",
+    delpost
+  })
 })
 
 
