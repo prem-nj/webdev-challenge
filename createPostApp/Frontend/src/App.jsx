@@ -17,10 +17,15 @@ function App() {
 
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/feed">Feed</Link>
-      </nav>
+ <div className="flex gap-5 text-xl uppercase items-center p-4 bg-gray-20">
+  <Link to="/" className="font-semibold hover:text-blue-500">
+    New Post
+  </Link>
+
+  <Link to="/feed" className="font-semibold hover:text-blue-500">
+    Feed
+  </Link>
+</div>
 
       <Routes>
         <Route path="/" element={<Home />} />

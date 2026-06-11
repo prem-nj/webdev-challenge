@@ -25,7 +25,12 @@ const Feed = () => {
         >
           <div className="flex flex-col relative">
             <div className="absolute bottom:0">
-              <Button />
+       <Button
+  id={elem._id}
+  onDelete={() =>
+    setfeed(feed.filter(post => post._id !== elem._id))
+  }
+/>
             </div>
 
             <img

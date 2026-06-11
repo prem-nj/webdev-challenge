@@ -1,10 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import  axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
-const Button = () => {
+const Button = ({id, onDelete }) => {
+  const navigate = useNavigate();
+ const handleDelete = async () => {
+  try {
+    await axios.delete(`http://localhost:3000/postdelete/${id}`);
+    console.log("Post deleted");
+    onDelete()
+  } catch (error) {
+    console.error(error);
+  }
+};
+
   return (
     <StyledWrapper>
-      <button className="btn">
+      <button className="btn" onClick={handleDelete}>
         <p className="paragraph"> delete </p>
         <span className="icon-wrapper">
           <svg className="icon" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
