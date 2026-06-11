@@ -24,7 +24,10 @@ A curated collection of my live web projects.
 *Vercel • HTML • CSS • JavaScript*
 
 ---
-
+### 📝 Create Post App
+> Full-stack social post management app with image upload, post feed, and delete functionality.  
+🔗 [Live Demo](https://create-post-frontend-lac.vercel.app/)  
+*React • Vite • Express.js • MongoDB • Railway • Vercel • ImageKit*
 
 
 *Last updated: May 2026*
