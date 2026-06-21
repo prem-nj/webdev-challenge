@@ -1,44 +1,53 @@
 # 💼 Projects | INCLUDED
+
 A curated collection of my live web projects.
 
 ---
 
 ### 🔍 Crime Analytics Platform
-> Data-driven insights for transparency and learning.  
-🔗 [Live Demo](https://dynamic-duckanoo-eee296.netlify.app/)  
-*Netlify • HTML • CSS • JS*
+
+> Data-driven insights for transparency and learning.
+> 🔗 **Live Demo:** https://dynamic-duckanoo-eee296.netlify.app/
+> *Netlify • HTML • CSS • JavaScript*
 
 ### 🎮 Tic-Tac-Toe Game
-> Classic two-player game with smooth UI.  
-🔗 [Live Demo](https://tic-tac-toe-eight-tan-18.vercel.app/)  
-*Vercel • HTML • CSS • Vanilla JS*
+
+> Classic two-player game with smooth UI.
+> 🔗 **Live Demo:** https://tic-tac-toe-eight-tan-18.vercel.app/
+> *Vercel • HTML • CSS • Vanilla JS*
 
 ### 📱 QR Code Generator
-> Generate QR codes instantly — simple & fast.  
-🔗 [Live Demo](https://qr-code-generator-sigma-indol.vercel.app/)  
-*Vercel • HTML • CSS • JS • QR API*
+
+> Generate QR codes instantly — simple & fast.
+> 🔗 **Live Demo:** https://qr-code-generator-sigma-indol.vercel.app/
+> *Vercel • HTML • CSS • JavaScript • QR API*
 
 ### 🎂 Age Calculator
-> Calculate your exact age in years, months, and days.  
-🔗 [Live Demo](https://age-calculator-sooty-gamma.vercel.app/)  
-*Vercel • HTML • CSS • JavaScript*
 
-# Create Post App
+> Calculate your exact age in years, months, and days.
+> 🔗 **Live Demo:** https://age-calculator-sooty-gamma.vercel.app/
+> *Vercel • HTML • CSS • JavaScript*
 
-A full-stack MERN application for creating and sharing posts.
+### 📝 Create Post App
 
-## Live Demo
--  https://create-post-frontend-lac.vercel.app/
-## Repository
+> Full-stack MERN application with authentication, image uploads, and post management.
 
-- GitHub: https://github.com/prem-nj/webdev-challenge
----
+🔗 **Live Demo:** https://create-post-frontend-lac.vercel.app/
+🔗 **GitHub:** https://github.com/prem-nj/webdev-challenge
 
-
-
-*Last updated: May 2026*
+*MongoDB • Express.js • React • Node.js • JWT Authentication • Image Uploads*
 
 ---
 
-✅ Clean • Responsive • Deployed  
-🛠 Built with modern web standards
+### 📂 Source Code
+
+🔗 GitHub: https://github.com/prem-nj
+
+---
+
+*Last updated: June 2026*
+
+---
+
+✅ Clean • Responsive • Deployed
+🛠 Built with modern web standards and MERN stack
