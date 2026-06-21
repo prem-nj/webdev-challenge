@@ -48,25 +48,7 @@ https://age-calculator-sooty-gamma.vercel.app/
 
 ---
 
-## 📝 Create Post App
 
-A full-stack MERN application that allows users to create, upload, and manage posts securely.
-
-**Features:**
-
-* User Authentication with JWT
-* Secure Password Hashing using bcrypt
-* Image Upload Support
-* Create, Read, and Delete Posts
-* Responsive UI
-
-**Live Demo:**
-https://create-post-frontend-lac.vercel.app/
-
-**GitHub Repository:**
-https://github.com/prem-nj/webdev-challenge
-
-**Tech Stack:** MongoDB, Express.js, React.js, Node.js, JWT, bcrypt
 
 ---
 
