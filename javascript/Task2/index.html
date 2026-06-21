@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Validation</title>
+  <style>
+    body {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form span {
+      color: red;
+      font-size: 14px;
+    }
+    input, textarea {
+      margin-bottom: 5px;
+    }
+    
+    input.error, textarea.error {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+  <form class="mainform" id="myform">
+    <label for="name">Name: </label>
+    <input type="text" id="name" /><br />
+    <span id="namereq"></span>
+    <br /><br />
+
+    <label for="email">Email: </label>
+    <input type="email" id="email" /><br />
+    <span id="emalreq"></span>
+    <br /><br />
+
+    <label for="website">Website: </label>
+    <input type="url" id="website" /><br />
+    <span id="validurl"></span>
+    <br /><br />
+
+    <label for="message">Message: </label>
+    <textarea id="msg"></textarea><br />
+    <span id="validarea"></span>
+    <br /><br />
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("myform");
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const website = document.getElementById("website");
+    const message = document.getElementById("msg");
+
+    const nameReq = document.getElementById("namereq");
+    const emailReq = document.getElementById("emalreq");
+    const urlReq = document.getElementById("validurl");
+    const msgReq = document.getElementById("validarea");
+
+    form.addEventListener("submit", (e) => {
+      let valid = true;
+
+
+
+      // Clear old messages
+      nameReq.innerHTML = "";
+      emailReq.innerHTML = "";
+      urlReq.innerHTML = "";
+      msgReq.innerHTML = "";
+
+      // Validate Name
+      if (name.value.trim() === "") {
+        nameReq.innerHTML = "* This field is required";
+        valid = false;
+      }
+
+      // Validate Email
+      if (email.value.trim() === "") {
+        emailReq.innerHTML = "* Valid email required";
+        valid = false;
+      }
+
+      // Validate Website
+      if (website.value.trim() === "") {
+        urlReq.innerHTML = "* Valid URL required";
+        valid = false;
+      }
+
+      // Validate Message
+      if (message.value.trim() === "") {
+        msgReq.innerHTML = "* This field is required";
+        valid = false;
+      }
+
+      if (!valid) {
+        e.preventDefault(); // Prevent form submission if invalid
+      }
+    });
+  </script>
+</body>
+</html>
