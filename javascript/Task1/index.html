@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade</title>
+      <style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #2A7B9B;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+background: linear-gradient(90deg, rgba(42, 123, 155, 0.782) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 0.727) 100%);
+    }
+    
+    button{
+        padding: 1.2rem;
+        font-size: x-large;
+        border: 2px solid greenyellow;
+        background-color: rgba(220, 221, 220, 0.514)25);
+        border-radius: 1.3rem;
+    }
+    .output{
+        margin-top: 2.3rem;
+    }
+    #result{
+        font-size: x-large;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+  </style>
+</head>
+<body>
+<h1> click here for Grade</h1>
+  <button onclick="displaygrade()">click here</button>
+  <div class="output">
+    <p id="result"></p>
+  </div>
+
+    <script>
+function displaygrade(){
+    let obj=document.getElementById("result");
+ var marks=prompt("enter your marks");
+if(80<=marks && marks<=100){
+obj.innerText="Grade A"
+}else if(60<=marks && marks<=80){
+    obj.innerText="Grade B"
+}else if(40<=marks && marks<=60){
+      obj.innerText="Grade c"
+}else{
+      obj.innerText="fail"
+}
+}
+
+    </script>
+</body>
+</html>
