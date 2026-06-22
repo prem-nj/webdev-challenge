@@ -9,7 +9,7 @@ async function onsignup(req, res) {
     const userexist = await userModel.findOne({ email });
 
     if (userexist) {
-     return  res.status(400).json({
+      return res.status(400).json({
         message: "User already exists",
       });
     }
@@ -48,41 +48,41 @@ async function onsignup(req, res) {
   }
 }
 
-async function onlogin(req,res){
-  try{
+async function onlogin(req, res) {
+  try {
 
-  const {email,password}=req.body;
-  const userexist=await userModel.findOne({email});
-  if(!userexist){
-    return res.status(404).json({
-      message:"user not found"
+    const { email, password } = req.body;
+    const userexist = await userModel.findOne({ email });
+    if (!userexist) {
+      return res.status(404).json({
+        message: "user not found"
+      })
+    }
+
+    const match = await bcrypt.compare(password, userexist.password);
+
+    if (!match) {
+      return res.status(400).json({ message: "password is incorrect" });
+    }
+
+    const token = generateToken(userexist._id);
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 7 * 24 * 60 * 60 * 1000
     })
-  }
 
-const match =await bcrypt.compare(password,userexist.password);
+    return res.status(200).json({
+      message: "login successfull",
+      user: {
+        username: userexist.username,
+        email: userexist.email
+      }
+    })
 
-if(!match){
-return res.status(400).json({message: "password is incorrect"});
-}
-
-const token=generateToken(userexist._id);
-res.cookie("token",token,{
-  httpOnly:true,
-  secure:process.env.NODE_ENV==="production",
-  sameSite:"strict",
-  maxAge:7*24*60*60*1000
-})
-
-return res.status(200).json({
-  message:"login successfull",
-  user:{
-    username:userexist.username,
-    email:userexist.email
-  }
-})
-
-  }catch(error){
-      console.log(error);
+  } catch (error) {
+    console.log(error);
 
     return res.status(500).json({
       error
@@ -91,19 +91,19 @@ return res.status(200).json({
   }
 }
 
-async function onlogout(req,res){
-  try{
+async function onlogout(req, res) {
+  try {
     res.clearCookie("token");
-    res.status(200).json({message:"logout successfully"});
-  }catch(error){
-      console.log(error);
+    res.status(200).json({ message: "logout successfully" });
+  } catch (error) {
+    console.log(error);
 
     res.status(500).json({
-      message:error
+      message: error
     })
   }
 }
 
 
 
-module.exports = {onsignup,onlogin,onlogout};
+module.exports = { onsignup, onlogin, onlogout };
