@@ -2,10 +2,11 @@ import React, { useContext } from 'react'
 import { useState } from 'react'
 import { datacontext } from '../../context/UserContext'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Signup = () => {
-
-    let serverUrl = useContext(datacontext)
+  const navigate=useNavigate();
+    const {serverUrl} = useContext(datacontext)
     const [username, setusername] = useState("")
     const [email, setuseremail] = useState("")
     const [password, setpassword] = useState("")
@@ -31,7 +32,7 @@ const Signup = () => {
         '>
                 <h1 className='text-white text-3xl uppercase font-semibold'> sign up</h1>
                 <div className='w-[150px] h-[150px] relative mt-8 border-2 border-amber-50 rounded-full bg-amber-100 flex justify-center items-center overflow-hidden '>
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" srcset="" className='object-cover w-[100%] h-[100%]' />
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" className='object-cover w-[100%] h-[100%]' />
 
                     <div className='w-[100%] h-[100%]  bg-black absolute top-0 opacity-0 text-white font-bold   hover:opacity-30 flex justify-center items-center cursor-pointer'>
                         <span className='text-3xl text-white font-bold'>+</span>
@@ -58,6 +59,7 @@ const Signup = () => {
 
                     <button className=' py-1 px-4 bg-green-200 text-black text-xl mt-4 rounded-2xl uppercase' > sign up</button>
                 </form>
+                        <p className='mt-4 text-white cursor-pointer ' onClick={()=>{navigate("/login")}}> Already have account ? <span className='text-blue-200 ml-2'>Login</span></p>
 
             </div>
 

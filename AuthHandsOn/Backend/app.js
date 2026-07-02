@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const connectDb = require('./config/db');
 var dotenv = require("dotenv");
-var cors=require('cors')
+var cors = require('cors')
 dotenv.config()
 
 connectDb()
@@ -26,8 +26,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors({
-  origin:"http://localhost:5173",
-  credential:true
+  origin: ["http://localhost:5173", "http://localhost:5174"],
+  credentials: true
 }))
 
 

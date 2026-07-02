@@ -7,7 +7,7 @@ var router = express.Router();
 router.post('/signup', onsignup);
 router.post('/logout', onlogout);
 router.post('/login', onlogin);
-
+router.post('/',onsignup)
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
