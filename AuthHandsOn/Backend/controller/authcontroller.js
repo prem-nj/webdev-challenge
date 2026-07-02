@@ -39,6 +39,7 @@ async function onsignup(req, res) {
       },
       token,
     });
+
   } catch (error) {
     console.log(error);
 
@@ -59,7 +60,7 @@ async function onlogin(req, res) {
       })
     }
 
-    const match = await bcrypt.compare(password, userexist.password);
+const match = await bcrypt.compare(password, userexist.password);    
 
     if (!match) {
       return res.status(400).json({ message: "password is incorrect" });
